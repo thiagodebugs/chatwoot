@@ -3,7 +3,7 @@
   "info": {
     "description": "This is the API documentation for Chatwoot server.",
     "version": "1.0.0",
-    "title": "Chatwoot",
+    "title": "Chatwave",
     "termsOfService": "https://www.chatwoot.com/terms-of-service/",
     "contact": {
       "email": "hello@chatwoot.com"
@@ -2993,7 +2993,7 @@
                           "type": "object",
                           "description": "The processed param values for template variables in template",
                           "example": {
-                            "1": "Chatwoot"
+                            "1": "Chatwave"
                           }
                         }
                       }
@@ -6388,7 +6388,7 @@
               "type": "object",
               "description": "The processed param values for template variables in template",
               "example": {
-                "1": "Chatwoot"
+                "1": "Chatwave"
               }
             }
           }
