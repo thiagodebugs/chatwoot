@@ -43,8 +43,8 @@ RSpec.describe Account do
   describe 'usage_limits' do
     let(:account) { create(:account) }
 
-    it 'returns ChatwaveApp.max limits' do
-      expect(account.usage_limits).to eq({ agents: ChatwaveApp.max_limit, inboxes: ChatwaveApp.max_limit })
+    it 'returns ChatwootApp.max limits' do
+      expect(account.usage_limits).to eq({ agents: ChatwootApp.max_limit, inboxes: ChatwootApp.max_limit })
     end
   end
 

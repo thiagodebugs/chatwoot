@@ -121,8 +121,8 @@ class Account < ApplicationRecord
 
   def usage_limits
     {
-      agents: ChatwaveApp.max_limit.to_i,
-      inboxes: ChatwaveApp.max_limit.to_i
+      agents: ChatwootApp.max_limit.to_i,
+      inboxes: ChatwootApp.max_limit.to_i
     }
   end
 

@@ -303,7 +303,7 @@ Rails.application.routes.draw do
     end
   end
 
-  if ChatwaveApp.enterprise?
+  if ChatwootApp.enterprise?
     namespace :enterprise, defaults: { format: 'json' } do
       namespace :api do
         namespace :v1 do

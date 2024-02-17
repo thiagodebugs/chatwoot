@@ -19,7 +19,7 @@ module Enterprise::Account
 
     return GlobalConfig.get(config_name)[config_name] if GlobalConfig.get(config_name)[config_name].present?
 
-    ChatwaveApp.max_limit
+    ChatwootApp.max_limit
   end
 
   def validate_limit_keys
