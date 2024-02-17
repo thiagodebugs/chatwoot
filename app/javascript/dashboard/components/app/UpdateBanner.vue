@@ -21,7 +21,7 @@ export default {
   components: { Banner },
   mixins: [adminMixin],
   props: {
-    latestChatwootVersion: { type: String, default: '' },
+    latestChatwaveVersion: { type: String, default: '' },
   },
   data() {
     return { userDismissedBanner: false };
@@ -30,13 +30,13 @@ export default {
     ...mapGetters({ globalConfig: 'globalConfig/get' }),
     updateAvailable() {
       return hasAnUpdateAvailable(
-        this.latestChatwootVersion,
+        this.latestChatwaveVersion,
         this.globalConfig.appVersion
       );
     },
     bannerMessage() {
       return this.$t('GENERAL_SETTINGS.UPDATE_CHATWOOT', {
-        latestChatwootVersion: this.latestChatwootVersion,
+        latestChatwaveVersion: this.latestChatwaveVersion,
       });
     },
     shouldShowBanner() {
@@ -44,7 +44,7 @@ export default {
         !this.userDismissedBanner &&
         this.globalConfig.displayManifest &&
         this.updateAvailable &&
-        !this.isVersionNotificationDismissed(this.latestChatwootVersion) &&
+        !this.isVersionNotificationDismissed(this.latestChatwaveVersion) &&
         this.isAdmin
       );
     },
@@ -59,9 +59,9 @@ export default {
       let updatedDismissedItems =
         LocalStorage.get(LOCAL_STORAGE_KEYS.DISMISSED_UPDATES) || [];
       if (updatedDismissedItems instanceof Array) {
-        updatedDismissedItems.push(this.latestChatwootVersion);
+        updatedDismissedItems.push(this.latestChatwaveVersion);
       } else {
-        updatedDismissedItems = [this.latestChatwootVersion];
+        updatedDismissedItems = [this.latestChatwaveVersion];
       }
       LocalStorage.set(
         LOCAL_STORAGE_KEYS.DISMISSED_UPDATES,

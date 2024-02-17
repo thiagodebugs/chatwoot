@@ -27,7 +27,7 @@ if ENV.fetch('SENTRY_DSN', false).present?
   require 'sentry-sidekiq'
 end
 
-module Chatwoot
+module Chatwave
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0

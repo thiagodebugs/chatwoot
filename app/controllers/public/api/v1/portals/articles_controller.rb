@@ -48,6 +48,6 @@ class Public::Api::V1::Portals::ArticlesController < Public::Api::V1::Portals::B
   end
 
   def render_article_content(content)
-    ChatwootMarkdownRenderer.new(content).render_article
+    ChatwaveMarkdownRenderer.new(content).render_article
   end
 end

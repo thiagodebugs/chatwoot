@@ -26,7 +26,7 @@ class Messages::Instagram::MessageBuilder < Messages::Messenger::MessageBuilder
     @inbox.channel.authorization_error!
     raise
   rescue StandardError => e
-    ChatwootExceptionTracker.new(e, account: @inbox.account).capture_exception
+    ChatwaveExceptionTracker.new(e, account: @inbox.account).capture_exception
     true
   end
 

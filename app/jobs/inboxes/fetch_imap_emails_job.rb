@@ -17,7 +17,7 @@ class Inboxes::FetchImapEmailsJob < MutexApplicationJob
   rescue LockAcquisitionError
     Rails.logger.error "Lock failed for #{channel.inbox.id}"
   rescue StandardError => e
-    ChatwootExceptionTracker.new(e, account: channel.account).capture_exception
+    ChatwaveExceptionTracker.new(e, account: channel.account).capture_exception
   end
 
   private
@@ -147,7 +147,7 @@ class Inboxes::FetchImapEmailsJob < MutexApplicationJob
   def process_mail(inbound_mail, channel)
     Imap::ImapMailbox.new.process(inbound_mail, channel)
   rescue StandardError => e
-    ChatwootExceptionTracker.new(e, account: channel.account).capture_exception
+    ChatwaveExceptionTracker.new(e, account: channel.account).capture_exception
     Rails.logger.error("
       #{channel.provider} Email dropped: #{inbound_mail.from} and message_source_id: #{inbound_mail.message_id}")
   end

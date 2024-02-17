@@ -5,7 +5,7 @@
       "SUBSCRIBED_EVENTS": "Subscribed Events",
       "FORM": {
         "CANCEL": "Peruuta",
-        "DESC": "Webhook-tapahtumat antavat sinulle reaaliaikaista tietoa siitä, mitä Chatwot-tililläsi tapahtuu. Syötä kelvollinen URL-osoite, jotta voit määrittää callbackin.",
+        "DESC": "Webhook-tapahtumat antavat sinulle reaaliaikaista tietoa siitä, mitä Chatwave-tililläsi tapahtuu. Syötä kelvollinen URL-osoite, jotta voit määrittää callbackin.",
         "SUBSCRIPTIONS": {
           "LABEL": "Events",
           "EVENTS": {

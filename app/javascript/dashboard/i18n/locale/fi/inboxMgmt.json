@@ -1,7 +1,7 @@
 {
   "INBOX_MGMT": {
     "HEADER": "Saapuneet-kansiot",
-    "SIDEBAR_TXT": "<p><b>Postilaatikko</b></p> <p> Kun yhdistät sivuston tai facebook-sivun Chatwotiin, sitä kutsutaan <b>postilaatikoksi</b>. Sinulla voi olla rajoittamaton määrä postilaatikoita Chatwave tililläsi. </p><p> Klikkaa <b>Lisää postilaatikko</b> yhdistääksesi verkkosivuston tai Facebook-sivun. </p><p> Kojelaudalla näet kaikki keskustelut kaikista saapuneet-kansiostasi yhdessä paikassa ja vastaat niihin `Keskustelut`-välilehdessä. </p><p> Voit myös nähdä postilaatikkoon liittyviä keskusteluja klikkaamalla postilaatikon nimeä kojelaudan vasemmassa paneelissa. </p>",
+    "SIDEBAR_TXT": "<p><b>Postilaatikko</b></p> <p> Kun yhdistät sivuston tai facebook-sivun Chatwaveiin, sitä kutsutaan <b>postilaatikoksi</b>. Sinulla voi olla rajoittamaton määrä postilaatikoita Chatwave tililläsi. </p><p> Klikkaa <b>Lisää postilaatikko</b> yhdistääksesi verkkosivuston tai Facebook-sivun. </p><p> Kojelaudalla näet kaikki keskustelut kaikista saapuneet-kansiostasi yhdessä paikassa ja vastaat niihin `Keskustelut`-välilehdessä. </p><p> Voit myös nähdä postilaatikkoon liittyviä keskusteluja klikkaamalla postilaatikon nimeä kojelaudan vasemmassa paneelissa. </p>",
     "LIST": {
       "404": "Tähän tiliin ei ole liitetty saapuneet-kansiota."
     },
@@ -9,7 +9,7 @@
       {
         "title": "Valitse kanava",
         "route": "settings_inbox_new",
-        "body": "Valitse keskusteluväylä, jonka haluat integroida Chatwotin kanssa."
+        "body": "Valitse keskusteluväylä, jonka haluat integroida Chatwavein kanssa."
       },
       {
         "title": "Luo saapet-kansio",

@@ -38,7 +38,7 @@
         </div>
       </div>
       <testimonials
-        v-if="isAChatwootInstance"
+        v-if="isAChatwaveInstance"
         class="flex-1"
         @resize-containers="resizeContainers"
       />
@@ -71,12 +71,12 @@ export default {
   },
   computed: {
     ...mapGetters({ globalConfig: 'globalConfig/get' }),
-    isAChatwootInstance() {
+    isAChatwaveInstance() {
       return this.globalConfig.installationName === 'Chatwave';
     },
   },
   beforeMount() {
-    this.isLoading = this.isAChatwootInstance;
+    this.isLoading = this.isAChatwaveInstance;
   },
   methods: {
     resizeContainers() {

@@ -6,7 +6,7 @@ module Integrations::Slack::SlackMessageHelper
     @message.save!
     { status: 'success' }
   rescue Slack::Web::Api::Errors::MissingScope => e
-    ChatwootExceptionTracker.new(e, account: conversation.account).capture_exception
+    ChatwaveExceptionTracker.new(e, account: conversation.account).capture_exception
     disable_and_reauthorize
   end
 

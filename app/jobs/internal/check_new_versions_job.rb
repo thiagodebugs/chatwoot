@@ -4,7 +4,7 @@ class Internal::CheckNewVersionsJob < ApplicationJob
   def perform
     return unless Rails.env.production?
 
-    instance_info = ChatwootHub.sync_with_hub
+    instance_info = ChatwaveHub.sync_with_hub
     return unless instance_info
 
     ::Redis::Alfred.set(::Redis::Alfred::LATEST_CHATWOOT_VERSION, instance_info['version'])

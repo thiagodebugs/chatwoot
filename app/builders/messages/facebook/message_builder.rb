@@ -30,7 +30,7 @@ class Messages::Facebook::MessageBuilder < Messages::Messenger::MessageBuilder
     Rails.logger.error e
     @inbox.channel.authorization_error!
   rescue StandardError => e
-    ChatwootExceptionTracker.new(e, account: @inbox.account).capture_exception
+    ChatwaveExceptionTracker.new(e, account: @inbox.account).capture_exception
     true
   end
 
@@ -128,11 +128,11 @@ class Messages::Facebook::MessageBuilder < Messages::Messenger::MessageBuilder
       if e.message.include?('2018218')
         Rails.logger.warn e
       else
-        ChatwootExceptionTracker.new(e, account: @inbox.account).capture_exception unless @outgoing_echo
+        ChatwaveExceptionTracker.new(e, account: @inbox.account).capture_exception unless @outgoing_echo
       end
     rescue StandardError => e
       result = {}
-      ChatwootExceptionTracker.new(e, account: @inbox.account).capture_exception
+      ChatwaveExceptionTracker.new(e, account: @inbox.account).capture_exception
     end
     process_contact_params_result(result)
   end

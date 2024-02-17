@@ -81,7 +81,7 @@ RSpec.describe Enterprise::MessageTemplates::ResponseBotService, type: :service 
       it 'captures the exception' do
         allow(chat_gpt_double).to receive(:generate_response).and_raise(StandardError)
 
-        expect(ChatwootExceptionTracker).to receive(:new).and_call_original
+        expect(ChatwaveExceptionTracker).to receive(:new).and_call_original
 
         expect do
           service.perform

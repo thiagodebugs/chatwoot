@@ -145,7 +145,7 @@ class Twilio::IncomingMessageService
     if error.message.include?('401 Unauthorized')
       Down.download(params[:MediaUrl0])
     else
-      ChatwootExceptionTracker.new(error, account: @inbox.account).capture_exception
+      ChatwaveExceptionTracker.new(error, account: @inbox.account).capture_exception
       nil
     end
   end

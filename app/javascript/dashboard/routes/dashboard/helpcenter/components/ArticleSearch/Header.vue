@@ -39,7 +39,7 @@ import {
 } from 'shared/helpers/KeyboardHelpers';
 
 export default {
-  name: 'ChatwootSearch',
+  name: 'ChatwaveSearch',
   mixins: [eventListenerMixins],
   props: {
     title: {

@@ -21,7 +21,7 @@
       :custom-views="customViews"
       :menu-config="activeSecondaryMenu"
       :current-role="currentRole"
-      :is-on-chatwoot-cloud="isOnChatwootCloud"
+      :is-on-chatwoot-cloud="isOnChatwaveCloud"
       @add-label="showAddLabelPopup"
       @toggle-accounts="toggleAccountModal"
     />
@@ -78,7 +78,7 @@ export default {
       inboxes: 'inboxes/getInboxes',
       isACustomBrandedInstance: 'globalConfig/isACustomBrandedInstance',
       isFeatureEnabledonAccount: 'accounts/isFeatureEnabledonAccount',
-      isOnChatwootCloud: 'globalConfig/isOnChatwootCloud',
+      isOnChatwaveCloud: 'globalConfig/isOnChatwaveCloud',
       labels: 'labels/getLabelsOnSidebar',
       teams: 'teams/getMyTeams',
     }),
@@ -114,7 +114,7 @@ export default {
           return false;
         }
         if (
-          menuItem.alwaysVisibleOnChatwootInstances &&
+          menuItem.alwaysVisibleOnChatwaveInstances &&
           !this.isACustomBrandedInstance
         ) {
           return true;

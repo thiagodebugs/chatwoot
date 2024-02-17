@@ -24,7 +24,7 @@ import 'vue-easytable/libs/theme-default/index.css';
 import { Integrations } from '@sentry/tracing';
 import {
   initializeAnalyticsEvents,
-  initializeChatwootEvents,
+  initializeChatwaveEvents,
 } from '../dashboard/helper/scriptHelpers';
 import FluentIcon from 'shared/components/FluentIcon/DashboardIcon';
 import VueDOMPurifyHTML from 'vue-dompurify-html';
@@ -90,7 +90,7 @@ commonHelpers();
 window.WootConstants = constants;
 window.axios = createAxios(axios);
 window.bus = new Vue();
-initializeChatwootEvents();
+initializeChatwaveEvents();
 initializeAnalyticsEvents();
 initalizeRouter();
 

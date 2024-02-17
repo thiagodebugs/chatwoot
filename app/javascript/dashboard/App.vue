@@ -6,7 +6,7 @@
     :class="{ 'app-rtl--wrapper': isRTLView }"
     :dir="isRTLView ? 'rtl' : 'ltr'"
   >
-    <update-banner :latest-chatwoot-version="latestChatwootVersion" />
+    <update-banner :latest-chatwoot-version="latestChatwaveVersion" />
     <template v-if="currentAccountId">
       <payment-pending-banner />
       <upgrade-banner />
@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       showAddAccountModal: false,
-      latestChatwootVersion: null,
+      latestChatwaveVersion: null,
     };
   },
 
@@ -111,12 +111,12 @@ export default {
       this.$store.dispatch('setActiveAccount', {
         accountId: this.currentAccountId,
       });
-      const { locale, latest_chatwoot_version: latestChatwootVersion } =
+      const { locale, latest_chatwoot_version: latestChatwaveVersion } =
         this.getAccount(this.currentAccountId);
       const { pubsub_token: pubsubToken } = this.currentUser || {};
       this.setLocale(locale);
       this.updateRTLDirectionView(locale);
-      this.latestChatwootVersion = latestChatwootVersion;
+      this.latestChatwaveVersion = latestChatwaveVersion;
       vueActionCable.init(pubsubToken);
 
       verifyServiceWorkerExistence(registration =>

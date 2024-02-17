@@ -40,7 +40,7 @@ const initializeAudioAlerts = user => {
   });
 };
 
-export const initializeChatwootEvents = () => {
+export const initializeChatwaveEvents = () => {
   window.bus.$on(CHATWOOT_RESET, () => {
     if (window.$chatwoot) {
       window.$chatwoot.reset();
