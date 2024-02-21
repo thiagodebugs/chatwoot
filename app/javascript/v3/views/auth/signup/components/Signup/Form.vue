@@ -142,9 +142,12 @@ export default {
     ...mapGetters({ globalConfig: 'globalConfig/get' }),
     termsLink() {
       return this.$t('REGISTER.TERMS_ACCEPT')
-        .replace('https://www.chatwoot.com/terms', this.globalConfig.termsURL)
         .replace(
-          'https://www.chatwoot.com/privacy-policy',
+          'https://www.chat.posy.com.br/terms',
+          this.globalConfig.termsURL
+        )
+        .replace(
+          'https://www.chat.posy.com.br/privacy-policy',
           this.globalConfig.privacyURL
         );
     },

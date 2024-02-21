@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Description: Install and manage a Chatwoot installation.
+# Description: Install and manage a Chatwave installation.
 # OS: Ubuntu 20.04 LTS
 # Script Version: 2.7.0
 # Run this script as root
@@ -21,7 +21,7 @@ LONGOPTS=console,debug,help,install,Install:,logs:,restart,ssl,upgrade,webserver
 OPTIONS=cdhiI:l:rsuwv
 CWCTL_VERSION="2.7.0"
 pg_pass=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 15 ; echo '')
-CHATWOOT_HUB_URL="https://hub.2.chatwoot.com/events"
+CHATWOOT_HUB_URL="https://hub.2.chat.posy.com.br/events"
 
 # if user does not specify an option
 if [ "$#" -eq 0 ]; then
@@ -146,12 +146,12 @@ function exit_handler() {
 #   None
 ##############################################################################
 function get_domain_info() {
-  read -rp 'Enter the domain/subdomain for Chatwoot (e.g., chatwoot.domain.com): ' domain_name
+  read -rp 'Enter the domain/subdomain for Chatwave (e.g., chatwoot.domain.com): ' domain_name
   read -rp 'Enter an email address for LetsEncrypt to send reminders when your SSL certificate is up for renewal: ' le_email
   cat << EOF
 
 This script will generate SSL certificates via LetsEncrypt and
-serve Chatwoot at https://$domain_name.
+serve Chatwave at https://$domain_name.
 Proceed further once you have pointed your DNS to the IP of the instance.
 
 EOF
@@ -319,7 +319,7 @@ EOF
 }
 
 ##############################################################################
-# Install Chatwoot
+# Install Chatwave
 # This includes setting up ruby, cloning repo and installing dependencies.
 # Globals:
 #   pg_pass
@@ -375,7 +375,7 @@ EOF
 }
 
 ##############################################################################
-# Setup Chatwoot systemd services and cwctl CLI
+# Setup Chatwave systemd services and cwctl CLI
 # Globals:
 #   None
 # Arguments:
@@ -446,17 +446,17 @@ function ssl_success_message() {
     cat << EOF
 
 ***************************************************************************
-Woot! Woot!! Chatwoot server installation is complete.
+Woot! Woot!! Chatwave server installation is complete.
 The server will be accessible at https://$domain_name
 
-Join the community at https://chatwoot.com/community?utm_source=cwctl
+Join the community at https://chat.posy.com.br/community?utm_source=cwctl
 ***************************************************************************
 
 EOF
 }
 
 function cwctl_message() {
-  echo $'\U0001F680 Try out the all new Chatwoot CLI tool to manage your installation.'
+  echo $'\U0001F680 Try out the all new Chatwave CLI tool to manage your installation.'
   echo $'\U0001F680 Type "cwctl --help" to learn more.'
 }
 
@@ -471,7 +471,7 @@ function cwctl_message() {
 #   None
 ##############################################################################
 function get_cw_version() {
-  CW_VERSION=$(curl -s https://app.chatwoot.com/api | python3 -c 'import sys,json;data=json.loads(sys.stdin.read()); print(data["version"])')
+  CW_VERSION=$(curl -s https://app.chat.posy.com.br/api | python3 -c 'import sys,json;data=json.loads(sys.stdin.read()); print(data["version"])')
 }
 
 ##############################################################################
@@ -489,7 +489,7 @@ function install() {
   cat << EOF
 
 ***************************************************************************
-              Chatwoot Installation (v$CW_VERSION)
+              Chatwave Installation (v$CW_VERSION)
 ***************************************************************************
 
 For more verbose logs, open up a second terminal and follow along using,
@@ -498,7 +498,7 @@ For more verbose logs, open up a second terminal and follow along using,
 EOF
 
   sleep 3
-  read -rp 'Would you like to configure a domain and SSL for Chatwoot?(yes or no): ' configure_webserver
+  read -rp 'Would you like to configure a domain and SSL for Chatwave?(yes or no): ' configure_webserver
 
   if [ "$configure_webserver" == "yes" ]; then
     get_domain_info
@@ -534,7 +534,7 @@ EOF
     echo "➥ 5/9 Skipping database setup."
   fi
 
-  echo "➥ 6/9 Installing Chatwoot. This takes a long while."
+  echo "➥ 6/9 Installing Chatwave. This takes a long while."
   setup_chatwoot &>> "${LOG_FILE}"
 
   if [ "$install_pg_redis" != "no" ]; then
@@ -555,13 +555,13 @@ EOF
 ➥ 9/9 Skipping SSL/TLS setup.
 
 ***************************************************************************
-Woot! Woot!! Chatwoot server installation is complete.
+Woot! Woot!! Chatwave server installation is complete.
 The server will be accessible at http://$public_ip:3000
 
 To configure a domain and SSL certificate, follow the guide at
-https://www.chatwoot.com/docs/deployment/deploy-chatwoot-in-linux-vm?utm_source=cwctl
+https://www.chat.posy.com.br/docs/deployment/deploy-chatwoot-in-linux-vm?utm_source=cwctl
 
-Join the community at https://chatwoot.com/community?utm_source=cwctl
+Join the community at https://chat.posy.com.br/community?utm_source=cwctl
 ***************************************************************************
 
 EOF
@@ -619,7 +619,7 @@ function help() {
 
   cat <<EOF
 Usage: cwctl [OPTION]...
-Install and manage your Chatwoot installation.
+Install and manage your Chatwave installation.
 
 Example: cwctl -i master
 Example: cwctl -l web
@@ -628,16 +628,16 @@ Example: cwctl --upgrade
 Example: cwctl -c
 
 Installation/Upgrade:
-  -i, --install             Install the latest stable version of Chatwoot
-  -I                        Install Chatwoot from a git branch
-  -u, --upgrade             Upgrade Chatwoot to the latest stable version
+  -i, --install             Install the latest stable version of Chatwave
+  -I                        Install Chatwave from a git branch
+  -u, --upgrade             Upgrade Chatwave to the latest stable version
   -s, --ssl                 Fetch and install SSL certificates using LetsEncrypt
   -w, --webserver           Install and configure Nginx webserver with SSL
 
 Management:
   -c, --console             Open ruby console
-  -l, --logs                View logs from Chatwoot. Supported values include web/worker.
-  -r, --restart             Restart Chatwoot server
+  -l, --logs                View logs from Chatwave. Supported values include web/worker.
+  -r, --restart             Restart Chatwave server
 
 Miscellaneous:
   -d, --debug               Show debug messages
@@ -648,13 +648,13 @@ Exit status:
 Returns 0 if successful; non-zero otherwise.
 
 Report bugs at https://github.com/chatwoot/chatwoot/issues
-Get help, https://chatwoot.com/community?utm_source=cwctl
+Get help, https://chat.posy.com.br/community?utm_source=cwctl
 
 EOF
 }
 
 ##############################################################################
-# Get Chatwoot web/worker logs (-l/--logs)
+# Get Chatwave web/worker logs (-l/--logs)
 # Globals:
 #   None
 # Arguments:
@@ -749,7 +749,7 @@ function upgrade_redis() {
     return
   fi
 
-  echo "Upgrading Redis to v7+ for Rails 7 support(Chatwoot v2.17+)"
+  echo "Upgrading Redis to v7+ for Rails 7 support(Chatwave v2.17+)"
 
   curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
   echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
@@ -805,14 +805,14 @@ function upgrade_node() {
 function upgrade() {
   cwctl_upgrade_check
   get_cw_version
-  echo "Upgrading Chatwoot to v$CW_VERSION"
+  echo "Upgrading Chatwave to v$CW_VERSION"
   sleep 3
   upgrade_prereq
   upgrade_redis
   upgrade_node
   sudo -i -u chatwoot << "EOF"
 
-  # Navigate to the Chatwoot directory
+  # Navigate to the Chatwave directory
   cd chatwoot
 
   # Pull the latest version of the master branch
@@ -852,7 +852,7 @@ EOF
 }
 
 ##############################################################################
-# Restart Chatwoot server (-r/--restart)
+# Restart Chatwave server (-r/--restart)
 # Globals:
 #   None
 # Arguments:
@@ -899,7 +899,7 @@ function report_event() {
   local event_name="$1"
   local event_data="$2"
 
-  CHATWOOT_HUB_URL="https://hub.2.chatwoot.com/events"
+  CHATWOOT_HUB_URL="https://hub.2.chat.posy.com.br/events"
 
   # get installation identifier
   local installation_identifier=$(get_installation_identifier)

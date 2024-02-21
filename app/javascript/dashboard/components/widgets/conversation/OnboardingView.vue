@@ -17,9 +17,9 @@
               })
             }}
           </p>
-          <p v-if="globalConfig.installationName === 'Chatwoot'">
+          <p v-if="globalConfig.installationName === 'Chatwave'">
             <a
-              href="https://www.chatwoot.com/changelog"
+              href="https://www.chat.posy.com.br/changelog"
               target="_blank"
               rel="noopener nofollow noreferrer"
               class="onboarding--link"
