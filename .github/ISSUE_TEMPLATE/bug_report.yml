@@ -27,9 +27,9 @@ body:
     id: environment
     attributes:
       label: Environment
-      description: Describe whether you are using Chatwave Cloud (app.chat.posy.com.br) or a self-hosted installation of Chatwave. If you are using a self-hosted installation of Chatwave, describe the type of deployment (Docker/Linux VM installation/Heroku/Kubernetes/Other).
+      description: Describe whether you are using Chatwave Cloud (chat.singularmodel.com.br) or a self-hosted installation of Chatwave. If you are using a self-hosted installation of Chatwave, describe the type of deployment (Docker/Linux VM installation/Heroku/Kubernetes/Other).
       options:
-        - app.chat.posy.com.br
+        - chat.singularmodel.com.br
         - Linux VM
         - Docker
         - Kubernetes

@@ -25,8 +25,8 @@ Customer engagement suite, an open-source alternative to Intercom, Zendesk, Sale
   <a href="https://discord.gg/cJXdrwS"><img src="https://img.shields.io/discord/647412545203994635" alt="Discord"></a>
 <<<<<<< HEAD
   <a href="https://huntr.dev/bounties/disclose"><img src="https://cdn.huntr.dev/huntr_security_badge_mono.svg" alt="Huntr"></a>
-  <a href="https://status.chat.posy.com.br"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fuptime.json" alt="uptime"></a>
-  <a href="https://status.chat.posy.com.br"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fresponse-time.json" alt="response time"></a>
+  <a href="https://status.chat.singularmodel.com.br"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fuptime.json" alt="uptime"></a>
+  <a href="https://status.chat.singularmodel.com.br"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fresponse-time.json" alt="response time"></a>
 =======
   <a href="https://status.chatwoot.com"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fuptime.json" alt="uptime"></a>
   <a href="https://status.chatwoot.com"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fchatwoot%2Fstatus%2Fmaster%2Fapi%2Fchatwoot%2Fresponse-time.json" alt="response time"></a>
@@ -72,11 +72,11 @@ Other features include:
 
 ## Documentation
 
-Detailed documentation is available at [chat.posy.com.br/help-center](https://www.chat.posy.com.br/help-center).
+Detailed documentation is available at [chat.singularmodel.com.br/help-center](https://www.chat.singularmodel.com.br/help-center).
 
 ## Translation process
 
-The translation process for Chatwave web and mobile app is managed at [https://translate.chat.posy.com.br](https://translate.chat.posy.com.br) using Crowdin. Please read the [translation guide](https://www.chat.posy.com.br/docs/contributing/translating-chatwoot-to-your-language) for contributing to Chatwave.
+The translation process for Chatwave web and mobile app is managed at [https://translate.chat.singularmodel.com.br](https://translate.chat.singularmodel.com.br) using Crowdin. Please read the [translation guide](https://www.chat.singularmodel.com.br/docs/contributing/translating-chatwoot-to-your-language) for contributing to Chatwave.
 
 ## Branching model
 
@@ -91,7 +91,7 @@ Deploying Chatwave to Heroku is a breeze. It's as simple as clicking this button
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/chatwoot/chatwoot/tree/master)
 
-Follow this [link](https://www.chat.posy.com.br/docs/environment-variables) to understand setting the correct environment variables for the app to work with all the features. There might be breakages if you do not set the relevant environment variables.
+Follow this [link](https://www.chat.singularmodel.com.br/docs/environment-variables) to understand setting the correct environment variables for the app to work with all the features. There might be breakages if you do not set the relevant environment variables.
 
 
 ### DigitalOcean 1-Click Kubernetes deployment
@@ -104,7 +104,7 @@ Chatwave now supports 1-Click deployment to DigitalOcean as a kubernetes app.
 
 ### Other deployment options
 
-For other supported options, checkout our [deployment page](https://chat.posy.com.br/deploy). 
+For other supported options, checkout our [deployment page](https://chat.singularmodel.com.br/deploy). 
 
 ## Security
 
@@ -118,7 +118,7 @@ If you need help or just want to hang out, come, say hi on our [Discord](https:/
 
 ## Contributors ✨
 
-Thanks goes to all these [wonderful people](https://www.chat.posy.com.br/docs/contributors):
+Thanks goes to all these [wonderful people](https://www.chat.singularmodel.com.br/docs/contributors):
 
 <a href="https://github.com/chatwoot/chatwoot/graphs/contributors"><img src="https://opencollective.com/chatwoot/contributors.svg?width=890&button=false" /></a>
 

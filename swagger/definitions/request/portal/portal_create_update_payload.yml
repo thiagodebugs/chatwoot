@@ -22,7 +22,7 @@ properties:
   homepage_link:
     type: string
     description: link to main dashboard
-    example: https://www.chat.posy.com.br/
+    example: https://www.chat.singularmodel.com.br/
   name:
     type: string
     description: Name for the portal

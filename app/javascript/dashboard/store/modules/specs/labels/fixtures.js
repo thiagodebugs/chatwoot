@@ -9,7 +9,7 @@ export default [
   {
     id: 4,
     title: 'saas-customer',
-    description: 'Customers who have account on app.chat.posy.com.br',
+    description: 'Customers who have account on chat.singularmodel.com.br',
     color: '#A8DBCB',
     show_on_sidebar: false,
   },

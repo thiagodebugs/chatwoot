@@ -101,7 +101,7 @@ export default {
       }
     },
     openOpenAIDoc() {
-      window.open('https://www.chat.posy.com.br/blog/v2-17', '_blank');
+      window.open('https://www.chat.singularmodel.com.br/blog/v2-17', '_blank');
     },
   },
 };

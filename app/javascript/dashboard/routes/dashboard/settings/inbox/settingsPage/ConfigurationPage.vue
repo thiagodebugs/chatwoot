@@ -38,7 +38,7 @@
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.chat.posy.com.br/docs/product/channels/live-chat/sdk/identity-validation/"
+            href="https://www.chat.singularmodel.com.br/docs/product/channels/live-chat/sdk/identity-validation/"
           >
             {{ $t('INBOX_MGMT.SETTINGS_POPUP.HMAC_LINK_TO_DOCS') }}
           </a>

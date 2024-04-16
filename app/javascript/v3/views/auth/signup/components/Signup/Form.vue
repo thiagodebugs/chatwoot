@@ -143,11 +143,11 @@ export default {
     termsLink() {
       return this.$t('REGISTER.TERMS_ACCEPT')
         .replace(
-          'https://www.chat.posy.com.br/terms',
+          'https://www.chat.singularmodel.com.br/terms',
           this.globalConfig.termsURL
         )
         .replace(
-          'https://www.chat.posy.com.br/privacy-policy',
+          'https://www.chat.singularmodel.com.br/privacy-policy',
           this.globalConfig.privacyURL
         );
     },

@@ -21,7 +21,7 @@ export default [
     account_id: 1,
     campaign_type: 'one_off',
     trigger_rules: {
-      url: 'https://chat.posy.com.br',
+      url: 'https://chat.singularmodel.com.br',
       time_on_page: '20',
     },
     created_at: '2021-05-03T08:15:35.828Z',

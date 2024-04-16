@@ -8,15 +8,15 @@
 - name: LOGO_DARK
   value: '/brand-assets/logo_dark.svg'
 - name: BRAND_URL
-  value: 'https://www.chat.posy.com.br'
+  value: 'https://www.chat.singularmodel.com.br'
 - name: WIDGET_BRAND_URL
-  value: 'https://www.chat.posy.com.br'
+  value: 'https://www.chat.singularmodel.com.br'
 - name: BRAND_NAME
   value: 'Chatwave'
 - name: TERMS_URL
-  value: 'https://www.chat.posy.com.br/terms-of-service'
+  value: 'https://www.chat.singularmodel.com.br/terms-of-service'
 - name: PRIVACY_URL
-  value: 'https://www.chat.posy.com.br/privacy-policy'
+  value: 'https://www.chat.singularmodel.com.br/privacy-policy'
 - name: DISPLAY_MANIFEST
   value: true
 # ------- End of Branding Related Config ------- #

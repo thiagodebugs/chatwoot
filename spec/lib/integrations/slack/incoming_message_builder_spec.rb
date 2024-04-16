@@ -72,7 +72,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         allow(builder).to receive(:sender).and_return(nil)
         builder.perform
         expect(conversation.messages.count).to eql(messages_count + 1)
-        expect(conversation.messages.last.content).to eql('this is test https://chat.posy.com.br Hey @Sojan Test again')
+        expect(conversation.messages.last.content).to eql('this is test https://chat.singularmodel.com.br Hey @Sojan Test again')
       end
 
       it 'creates a private note' do
@@ -132,7 +132,7 @@ describe Integrations::Slack::IncomingMessageBuilder do
         allow(builder).to receive(:sender).and_return(nil)
         builder.perform
         expect(conversation.messages.count).to eql(messages_count + 1)
-        expect(conversation.messages.last.content).to eql('this is test https://chat.posy.com.br Hey @Sojan Test again')
+        expect(conversation.messages.last.content).to eql('this is test https://chat.singularmodel.com.br Hey @Sojan Test again')
         expect(conversation.messages.last.attachments).to be_any
       end
 
@@ -154,8 +154,8 @@ describe Integrations::Slack::IncomingMessageBuilder do
         {
           team_id: 'TLST3048H',
           api_app_id: 'A012S5UETV4',
-          event: link_shared_event.merge({ links: [{ url: "https://qa.chat.posy.com.br/app/accounts/1/conversations/#{conversation.display_id}",
-                                                     domain: 'qa.chat.posy.com.br' }] }),
+          event: link_shared_event.merge({ links: [{ url: "https://qa.chat.singularmodel.com.br/app/accounts/1/conversations/#{conversation.display_id}",
+                                                     domain: 'qa.chat.singularmodel.com.br' }] }),
           type: 'event_callback',
           event_time: 1_588_623_033
         }

@@ -19,7 +19,7 @@
           </p>
           <p v-if="globalConfig.installationName === 'Chatwave'">
             <a
-              href="https://www.chat.posy.com.br/changelog"
+              href="https://www.chat.singularmodel.com.br/changelog"
               target="_blank"
               rel="noopener nofollow noreferrer"
               class="onboarding--link"

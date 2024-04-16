@@ -718,10 +718,10 @@ RSpec.describe Conversation do
   end
 
   describe 'validate valid referer url' do
-    let(:conversation) { create(:conversation, additional_attributes: { referer: 'https://www.chat.posy.com.br/' }) }
+    let(:conversation) { create(:conversation, additional_attributes: { referer: 'https://www.chat.singularmodel.com.br/' }) }
 
     it 'returns nil' do
-      expect(conversation['additional_attributes']['referer']).to eq('https://www.chat.posy.com.br/')
+      expect(conversation['additional_attributes']['referer']).to eq('https://www.chat.singularmodel.com.br/')
     end
   end
 
